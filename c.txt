@@ -1,0 +1,357 @@
+let a=5;
+let a=3;
+console.log(a) //3
+
+let a=5;
+a=3;
+console.log(a)//3
+
+const a=5;
+a=3;
+console.log(a)//error
+
+variable
+--------
+number
+Boolean
+string
+
+let a=BigInt(12353);
+let a=8923804704989n;
+
+let students={
+    name : "abi";
+    age : 20;
+    is Student : true
+}
+console.log(students)
+
+let students={
+    name : ["abi","rahul"],
+    age : 20,
+    isStudent : true,
+    address : {
+        state : "tamilnadu",
+        city : "perundurai"
+    },
+    hello:function(){
+        console.log("hi students")
+    }
+}
+console.log(students.name);
+
+let student1 = new Object();
+student1.name = "abi"
+student1.age = 20;
+console.log(student1);
+
+let student1 = new Object();
+student1.name = "abi"
+student1.age = 20;
+student1.hel = function(){
+    console.log("hello");
+}
+student1.hel()
+
+short circuit operator :logical and , logical or
+
+let a=5;
+++a;
+console.log(a);//6
+
+let a=5;
+a++;
+console.log(a);//6
+
+console.log(a++);//5
+
+console.log(++a);//6
+
+let a = true;
+!!!!!!a;
+console.log(a);//true
+
+let a = true;
+!!!!!a;
+console.log(a);//true(a value is not stored)
+
+let a = true;
+b=!!!!!a;
+console.log(b);//false
+
+let a=5;
+let b=a++ + --a;
+let c=++b + b++;
+a++;
+console.log(a);
+console.log(b);
+console.log(c);//6 12 22
+
+
+------------------------------------------------------------------
+
+
+conditional statement
+if
+if else
+if else if else
+nested if else
+switch
+
+var a=3;
+if (a%3==0 && a%5==0)
+{
+    console.log("hai hello");
+    
+}
+else if(a%3==0)
+{
+    console.log("hai");
+}
+else if(a%5==0)
+{
+    console.log("hello")
+}
+else{
+    console.log("none")
+}
+------------------------------------------------------
+let choice="h";
+switch(choice){
+    case "h":
+        console.log("hi everyone");
+        break;
+    case "hello":
+        console.log("hello everyone");
+        break;
+    case "welcome":
+        console.log("welcome everyone");
+        break;
+}
+--------------------------------------------------------
+let choice=2;
+switch(choice){
+    case 1:
+        console.log("one");
+      
+    case 2:
+        console.log("two");
+        break;
+    case 3:
+        console.log("three");
+        break;
+    default:
+        console.log("enter between 1 to 3");
+        break;
+}
+--------------------------------------------------------
+let choice=1;
+switch(choice){
+    case 1:
+        console.log("one");
+      
+    case 2:
+        console.log("two");
+        
+    case 3:
+        console.log("three");
+       
+    default:
+        console.log("enter between 1 to 3");
+       
+}
+//without break
+one
+two
+three
+enter between 1 to 3
+---------------------------------------------------------
+A 'break' statement can only be used within an enclosing iteration or switch statement.
+if(5>3){
+    break;
+}//error
+--------------------------------------------------------
+if(false){
+    console.log("hai");
+    console.log("hello");
+}empty o/p
+--------------------------------------------------
+if(false)
+    console.log("hai");
+    console.log("hello");
+//hello
+-------------------------------------------------
+if(false)
+    console.log("hai");
+    console.log("hello");
+else
+    console.log("welcome");
+//syntaxerror
+--------------------------------------------------
+for(;;){
+    console.log("hai");
+}//infinite time hai
+------------------------------------------------------
+let a=1
+for(console.log('a');a<=3;console.log('b')){
+    console.log('c');
+    a++;
+}
+//a
+c
+b
+c
+b
+c
+b
+-------------------------------------------------------
+let a=1
+for(a=1;a<100;a++);
+console.log('hi');
+console.log(a);
+//hi
+  100
+---------------------------------------------------------
+let a=1
+for(a=1;a<100;a++)
+console.log('hi');
+console.log(a);
+//hi(99 times)
+  100
+----------------------------------------------------------
+for(let a=1;a<100;a++)
+console.log('hi');
+console.log(a);
+//hi(99 times)
+error(for a)
+---------------------------------------------------------
+for(var a=1;a<100;a++)
+console.log('hi');
+console.log(a);
+//hi(99times)
+100(globally scoped)
+-------------------------------------------------------------
+while(){
+    
+}
+//error
+---------------------------------------------------------
+while(){
+    console.log("hi");
+}
+//eerror
+------------------------------------------------------------
+let a=100;
+do{
+    console.log(a);
+    a++;
+}
+while(a<=10)//100
+
+---------------------------------------------------------------
+
+FUNCTIONS
+//non parameterised + without return
+function apple(){
+    console.log("apple");
+}
+apple();
+
+//non parametrized + with return
+function apple(){
+    let a="prange"
+    return a;
+}
+let b=apple();
+console.log(b);//orange
+----------------------------------------------------------
+ARROW FUNCTION
+let apple = () => console.log("hello");
+apple()
+//hello
+---------------------------------------------------------
+let banana = () => {
+    console.log("nandhini");
+    return 3+3;
+}
+console.log(banana());
+//Nandhini
+6
+-----------------------------------------------------------
+let banana = (a,b) => {
+    console.log("nandhini");
+    return a+b;
+}
+console.log(banana(3,3));
+//Nandhini
+6(parameterized)
+-----------------------------------------------------
+//SPREAD OPERATOR
+SYMBOL( ... )
+let a=[1,2,3,4,5]
+let b=[...a];
+console.log(b)
+//[1,2,3,4,5]
+-------------------------------------------------------
+let a=[1,2,3,4,5]
+let b=a;
+b[2]=10;
+console.log(a);
+//[1,2,3,4,5]
+--------------------------------------------------------
+let a={
+    name:"indhu",
+    age:23
+}
+let b={...a};
+console.log(b);
+//{ name: 'indhu', age: 23 }
+--------------------------------------------------------------
+let a={
+    name:"indhu",
+    age:18
+}
+let {name,age}=a;
+console.log({name,age})
+//{ name: 'indhu', age: 18 }
+---------------------------------------------------------------
+CALLBACK
+function dog(callback){
+    setTimeout(()=>{
+        console.log("Jack the dog");
+        callback();
+    },2000);
+}
+function cat(){
+    console.log("rose the cat")
+}
+dog(cat)
+//Jack the dog
+rose the cat
+-------------------------------------------------------------
+function attendence(callback){
+    setTimeout(()=>{
+        console.log("attendence present");
+        callback();
+    },1500);
+}
+function lunch(callback){
+    setTimeout(()=>{
+        console.log("lunch and snacks");
+        callback();
+    },1500);
+}
+function home(callback){
+    setTimeout(()=>{
+        console.log("Going to home");
+        callback();
+    },1500);
+}
+attendence(()=>{
+    lunch(()=>{
+        home(()=>{
+            console.log("day completed")
+        })
+    })
+})
+---------------------------------------------------------------
